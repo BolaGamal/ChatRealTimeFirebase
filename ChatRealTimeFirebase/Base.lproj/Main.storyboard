@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login RegisterVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginRegisterVC" id="BYZ-38-t0r" customClass="LoginRegisterVC" customModule="ChatRealTimeFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Cav-SZ-D4s">
+                                <rect key="frame" x="24" y="126.5" width="366" height="711.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OCN-YC-mGB">
+                                    <size key="itemSize" width="366" height="387"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Zz3-sq-k5I" customClass="LoginRegisterCell" customModule="ChatRealTimeFirebase" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="162.5" width="366" height="387"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ITc-qS-4Cf">
+                                            <rect key="frame" x="0.0" y="0.0" width="366" height="387"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Zhw-Mt-IJm">
+                                                    <rect key="frame" x="20" y="57" width="326" height="273"/>
+                                                    <subviews>
+                                                        <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x67-3M-ree">
+                                                            <rect key="frame" x="0.0" y="-56" width="326" height="56"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="56" id="ZpB-20-CBM"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ACo-B6-Cxv">
+                                                            <rect key="frame" x="0.0" y="0.0" width="326" height="56"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="56" id="Wlt-es-coT"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rdl-0Q-Lre">
+                                                            <rect key="frame" x="0.0" y="80" width="326" height="56"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="56" id="jFP-2i-CBk"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        </textField>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWe-Fs-Nmy">
+                                                            <rect key="frame" x="0.0" y="160" width="326" height="56"/>
+                                                            <color key="backgroundColor" red="0.091867156326770782" green="0.4804084300994873" blue="0.21883636713027954" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="56" id="qMj-XY-1C9"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="Login">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="16"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="login:" destination="Zz3-sq-k5I" eventType="touchUpInside" id="Ynp-kZ-RPZ"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltJ-ck-8XV">
+                                                            <rect key="frame" x="0.0" y="240" width="326" height="33"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="Register">
+                                                                <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="register:" destination="Zz3-sq-k5I" eventType="touchUpInside" id="OXF-12-nhi"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Zhw-Mt-IJm" firstAttribute="leading" secondItem="ITc-qS-4Cf" secondAttribute="leading" constant="20" id="jdN-Cb-qAZ"/>
+                                                <constraint firstItem="Zhw-Mt-IJm" firstAttribute="centerY" secondItem="ITc-qS-4Cf" secondAttribute="centerY" id="p5I-wh-fIF"/>
+                                                <constraint firstAttribute="trailing" secondItem="Zhw-Mt-IJm" secondAttribute="trailing" constant="20" id="sXP-3B-nxr"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="366" height="387"/>
+                                        <connections>
+                                            <outlet property="actionButton" destination="xWe-Fs-Nmy" id="AUu-wm-uWQ"/>
+                                            <outlet property="emailTF" destination="ACo-B6-Cxv" id="998-L1-kEf"/>
+                                            <outlet property="passwordTF" destination="rdl-0Q-Lre" id="46d-rX-urs"/>
+                                            <outlet property="slideButton" destination="ltJ-ck-8XV" id="roW-j0-BxW"/>
+                                            <outlet property="userNameTF" destination="x67-3M-ree" id="XpS-aE-Xux"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="6sr-ft-wd8"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="iIK-K0-E2a"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chating App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Btn-e4-TfL">
+                                <rect key="frame" x="24" y="96" width="366" height="30.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Btn-e4-TfL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="DMN-QZ-ewL"/>
+                            <constraint firstItem="Cav-SZ-D4s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="EsY-o4-hfQ"/>
+                            <constraint firstItem="Btn-e4-TfL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="Ih5-vw-pcm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cav-SZ-D4s" secondAttribute="bottom" constant="24" id="NQL-Mu-hSP"/>
+                            <constraint firstItem="Cav-SZ-D4s" firstAttribute="top" secondItem="Btn-e4-TfL" secondAttribute="bottom" id="Thq-iq-bV8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cav-SZ-D4s" secondAttribute="trailing" constant="24" id="dKc-0x-iSV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Btn-e4-TfL" secondAttribute="trailing" constant="24" id="t2A-m2-C1i"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Cav-SZ-D4s" id="CMP-NF-le3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="53.571428571428569"/>
+        </scene>
+    </scenes>
+</document>
